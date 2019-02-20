@@ -1,0 +1,12 @@
+<!--pages/user/address/address.wxml-->
+<view>
+    <button bindtap='getMobile'>获取地址</button>
+</view>
+<!-- <functional-page-navigator
+  name="chooseAddress"
+  version="develop"
+  bind:success="onSuccess"
+  bind:fail="onFail"
+>
+  <button>选择收货地址</button>
+</functional-page-navigator> -->

@@ -1,0 +1,67 @@
+<!-- 底部bar -->
+<van-tabbar active="1" color="#f759ab" bind:change="changeBar">
+  <van-tabbar-item key="task" icon="shop">任务大厅</van-tabbar-item>
+  <van-tabbar-item key="mytask" icon="records" info="3">我的任务</van-tabbar-item>
+  <van-tabbar-item key="user" icon="contact">用户中心</van-tabbar-item>
+</van-tabbar>
+
+<!-- 导航栏 -->
+<van-nav-bar title="我的任务" />
+
+<!-- 任务 -->
+<view class='body'>
+  <view>
+    <van-tabs active="3" bind:change="onChange">
+      <van-tab title="已接任务" class='tasks'>
+        <view wx:for="{{tasks}}">
+        <van-panel title="{{item.name}}" desc="{{item.name}}" status="{{item.money}}" use-footer-slot>
+          <view class='task-content'>{{item.detail}}</view>
+          <view slot="footer" class='task-btn'>
+            <van-button size="small" id="{{item.index}}" type='danger' bind:click="deteleTask">删除</van-button>
+            <van-button size="small" bind:click="detailTask">详情</van-button>
+            <van-button size="small" bind:click="completeTask" data-task-index="{{index}}" type="primary">完成</van-button>
+          </view>
+        </van-panel>
+        </view>
+      </van-tab>
+      <van-tab title="已完成任务" class='tasks'>
+      <view wx:for="{{finishTasks}}">
+        <van-panel title="{{item.name}}" desc="{{item.name}}" status="{{item.money}}" use-footer-slot>
+          <view class='task-content'>{{item.detail}}</view>
+          <view slot="footer" class='task-btn'>
+            <van-button size="small" id="{{index}}" type='danger' bind:click="deteleTask">删除</van-button>
+            <van-button size="small" bind:click="detailTask">详情</van-button>
+
+          </view>
+        </van-panel>
+        </view>
+      </van-tab>
+      <van-tab title="待支付">内容 3</van-tab>
+      <van-tab title="执行中">
+        <van-panel title="{{ready.note}}" desc="{{ready.addr}}" status="{{ready.price}}" use-footer-slot>
+          <view class='task-content'>{{ready.detail}}</view>
+           <!-- <van-button size="small" bind:click="detailTask">详情</van-button>
+            <van-button size="small" bind:click="completeTask" type="primary">完成</van-button> -->
+        </van-panel>
+      </van-tab>
+    </van-tabs>
+  </view>
+
+  <!-- <view wx:for="{{tasks}}" class='tasks'>
+    <view>
+      <van-panel title="{{item.name}}" 
+        desc="{{item.addr}}" status="{{item.money}}" 
+        use-footer-slot>
+        <view class='task-content'>{{item.detail}}</view>
+        <view slot="footer" class='task-btn'>
+         <van-button size="small" id="{{index}}" type='danger' bind:click="deteleTask">删除</van-button>
+          <van-button size="small" bind:click="detailTask">详情</van-button>
+          <van-button size="small" bind:click="completeTask" type="primary">完成</van-button>
+        </view>
+      </van-panel>
+    </view>
+  </view> -->
+</view>
+
+<!-- 弹出框 -->
+<van-dialog id="van-dialog" />

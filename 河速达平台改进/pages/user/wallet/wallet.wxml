@@ -1,0 +1,23 @@
+<!--pages/user/wallet/wallet.wxml-->
+<!-- 头部bar -->
+<van-nav-bar title="我的钱包" custom-class="bar" />
+
+<view class='wallet'>
+  <view class='wallet-msg'>账户余额(元)</view>
+  <view class="wallet-money">0</view>
+</view>
+
+<van-cell-group>
+  <van-cell
+    title="充值"
+    is-link
+  />
+  <van-cell
+    title="提现"
+    is-link
+  />
+  <van-cell
+    title="明细"
+    is-link
+  />
+</van-cell-group>

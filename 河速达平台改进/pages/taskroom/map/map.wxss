@@ -1,0 +1,41 @@
+.map{
+  position: relative;
+}
+.btn-item{
+  position: absolute;
+  bottom: 0;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 50rpx 30rpx;
+  overflow: hidden;
+}
+.btn-item button{
+  float: right;
+  margin: 10rpx;
+  padding: 0 30rpx;
+  text-align: center;
+}
+
+
+.write{
+  text-align: center;
+  margin: 25rpx 0;
+}
+.write>input{
+  float: left;
+}
+
+.swiper-container {
+ height: 5vh;
+ line-height: 5vh;
+ width: 100%;
+ overflow: hidden;
+ margin-left: 30rpx;
+}
+ 
+.swiper-item {
+ font-size: 25rpx;
+ overflow: hidden;
+ white-space: nowrap;
+ letter-spacing: 2px;
+}

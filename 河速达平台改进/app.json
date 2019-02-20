@@ -1,0 +1,27 @@
+{
+  "pages": [
+    "pages/taskroom/taskroom",
+    "pages/login/login",
+    "pages/login/register/register",
+    "pages/user/user",
+    "pages/user/authentication/authentication",
+    "pages/mytask/mytask",
+    "pages/taskroom/task/task",
+    "pages/user/userinfo/userinfo",
+    "pages/user/wallet/wallet",
+    "pages/taskroom/release/release",
+    "pages/taskroom/map/map",
+    "pages/taskroom/contract/contract",
+    "pages/user/myp/myp",
+    "pages/user/records/records",
+    "pages/user/details/details",
+    "pages/user/address/address"
+
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "河速达",
+    "navigationBarTextStyle": "black"
+  }
+}

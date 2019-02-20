@@ -1,0 +1,10 @@
+<!--pages/user/userinfo/userinfo.wxml-->
+<van-cell-group>
+  <van-cell title="姓名" value="{{name}}张政谦" />
+  <van-cell title="手机号" value="{{phone}}15036162419" />
+  <van-cell title="学校" value="{{school}}河南大学" />
+  <van-cell title="年纪" value="{{grade}}大三" />
+  <van-cell title="专业" value="{{work}}软件工程" />
+  <van-cell title="交通工具" value="{{vehicle}}电车" />
+  <van-cell title="认证资格" value="{{authen}}通过" />
+</van-cell-group>

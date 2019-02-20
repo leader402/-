@@ -1,0 +1,48 @@
+<form bindsubmit="formSubmit">
+<view class='body'>
+  <view class="detail block">
+    <textarea placeholder="请输入商品详细信息" name='detail'></textarea>
+  </view>
+
+  <view class='block'>
+    <van-cell-group>
+      <van-cell title="点击选择购买地址" label="请定位到商品在地址" is-link 
+      url="/pages/taskroom/map/map"
+      icon="shop"
+      />
+    </van-cell-group>
+    <van-cell-group>
+      <van-cell title="点击选择我的地址" label="请定位到您所在地址" is-link 
+      url="/pages/taskroom/map/map"
+      icon="location"
+      />
+    </van-cell-group>
+  </view>
+
+  <view class="block">
+    <van-cell-group>
+      <van-field placeholder="商品配送时间" label="配送时间" left-icon="clock" name="time" />
+      <van-field placeholder="商品预估价格" label="商品预估价" left-icon="gold-coin" name="price"/>
+      <van-field label="留言" name="note" type="textarea" placeholder="请输入留言" left-icon="chat" autosize />
+    </van-cell-group>
+  </view>
+
+  <view class='block agree'>
+    <van-switch-cell title="我已阅读并同意跑腿协议" checked="{{ checked }}" bind:change="changeChecked" />
+    <view class="contract">
+      我已阅读并同意
+      <navigator url='./../contract/contract'>《跑腿服务协议》</navigator>
+    </view>
+  </view>
+
+  <!-- <view class='block' bind:click="onClick">
+    <van-submit-bar price="{{ 3050 }}" button-text="提交订单" bind:submit="onSubmit" />
+  </view> -->
+
+  <view class='block'>
+    <button formType="submit" type="primary">发布任务</button>
+  </view>
+</view>
+<view class='block'></view>
+<!-- 提交订单 -->
+</form>

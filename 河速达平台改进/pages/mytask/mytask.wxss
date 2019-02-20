@@ -1,0 +1,15 @@
+/* pages/mystak/mytask.wxss */
+.tasks>view{
+  margin:10px 0;
+}
+.task-content{
+  font-size: 13px;
+  padding:1rem;
+}
+.task-btn{
+  padding-left: 250rpx;
+}
+.body{
+  background-color: rgb(245, 245, 245);
+  padding: 0 0 70px 0;
+}

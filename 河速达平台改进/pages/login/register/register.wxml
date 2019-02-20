@@ -1,0 +1,56 @@
+<van-nav-bar
+  title="注册"
+  left-arrow
+/>
+
+<van-cell-group>
+  <van-field
+    value="{{ username }}"
+    label="用户名"
+    placeholder="请输入用户名"
+    error-message="{{usernameErr}}"
+  />
+  <van-field
+    value="{{ phone }}"
+    label="手机号"
+    placeholder="请输入手机号"
+    error-message="{{phoneErr}}"
+  />
+  <view class="section">
+    <picker bindchange="schoolChose" value="{{schoolSeled}}" range="{{schools}}">
+      <view class="picker">
+        <text class='picker-sel'>学校</text>
+        <text class='picker-con'>{{schools[schoolSeled]}}</text>
+      </view>
+    </picker>
+  </view>
+
+  <view class="section">
+    <picker bindchange="gradeChose" value="{{gradeSeled}}" range="{{grades}}">
+      <view class="picker">
+        <text class='picker-sel'>年级</text>
+        <text class='picker-con'>{{grades[gradeSeled]}}</text>
+      </view>
+    </picker>
+  </view>
+  <view class="section">
+    <picker bindchange="workChose" value="{{workSeled}}" range="{{works}}">
+      <view class="picker">
+        <text class='picker-sel'>专业</text>
+        <text class='picker-con'>{{works[workSeled]}}</text>
+      </view>
+    </picker>
+  </view>
+  <view class="section">
+    <picker bindchange="vehicleChose" value="{{vehicleSeled}}" range="{{vehicles}}">
+      <view class="picker">
+        <text class='picker-sel'>交通工具</text>
+        <text class='picker-con'>{{vehicles[vehicleSeled]}}</text>
+      </view>
+    </picker>
+  </view>
+</van-cell-group>
+
+<view style='width:1px;height:30px;'></view>
+
+<van-button type="primary" size="large" bind:click="submit"	>提交</van-button>

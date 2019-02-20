@@ -1,0 +1,12 @@
+<!--pages/taskroom/task/task.wxml-->
+<van-cell-group>
+  <van-cell title="标题" value="农夫山泉" />
+  <van-cell title="地址" value="华苑公寓6号楼505" />
+  <van-cell title="发布时间" value="2018.11.7 22:05" />
+  <van-cell title="发布人" value="张政谦" />
+  <van-cell title="奖励金" value="10元" />
+</van-cell-group>
+
+<van-panel title="发布内容" status="未接单">
+  <view class="content">我要买一瓶么得感情的水！</view>
+</van-panel> 

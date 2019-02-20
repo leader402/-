@@ -1,0 +1,4 @@
+/* pages/taskroom/task/task.wxss */
+.content{
+  padding: 1rem;
+}

@@ -1,0 +1,31 @@
+/* pages/taskroom/taskroom.wxss */
+.tasks>view{
+  margin:10px 0;
+}
+.task-header{
+  width: 100%;
+  background-color: red;
+}
+.task-content{
+  font-size: 13px;
+  padding:1rem;
+}
+.task-btn{
+  padding-left: 400rpx;
+}
+.body{
+  background-color: rgb(245, 245, 245);
+  padding: 0 0 70px 0;
+}
+.release{
+  width: 130rpx;
+  height: 130rpx;
+  line-height: 130rpx;
+  background-color: rgba(61, 131, 211, 0.8);
+  border-radius: 50%;
+  position: fixed;
+  bottom: 12%;
+  right: 12%;
+  text-align: center;
+  color: #fff;
+}

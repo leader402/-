@@ -1,0 +1,84 @@
+<!--pages/user/user.wxml-->
+
+<!-- 底部bar -->
+<van-tabbar active="2" color="#f759ab" bind:change="changeBar">
+  <van-tabbar-item key="task" icon="shop">任务大厅</van-tabbar-item>
+  <van-tabbar-item key="mytask" icon="records" info="3">我的任务</van-tabbar-item>
+  <van-tabbar-item key="user" icon="contact">用户中心</van-tabbar-item>
+</van-tabbar>
+
+<!-- 头部bar -->
+<van-nav-bar title="用户中心" custom-class="bar" />
+
+<van-row custom-class="info">
+  <van-col span="7" class="info-img1">
+  <view class='userinfo-avatar'>
+       <open-data type="userAvatarUrl" class="info-img1"></open-data>  
+      
+  </view>
+ 
+ 
+    <!-- <image class="info-img" src='/static/img/user.jpg'></image> -->
+  </van-col>
+   <!-- <van-col span="5">
+   <view class='userinfo-username'>
+     <open-data type="userNickName" lang="zh_CN" class="info-text" ></open-data>
+ </view> -->
+  <!-- </van-col> -->
+  <van-col span="7">
+     <open-data type="userNickName" lang="zh_CN" ></open-data>
+    <view class="info-num1">星级：1星</view>
+  </van-col>
+  <van-col span="7">
+    <view class="info-num">押金：0</view>
+  </van-col>
+</van-row>
+<van-row>
+  <van-col span="8">
+    <navigator class='user-btn' url="/pages/user/userinfo/userinfo">
+      <image src='/static/img/info.png'></image>
+      <view>个人资料</view>
+    </navigator>
+  </van-col>
+  <van-col span="8">
+    <navigator class='user-btn' url='/pages/user/wallet/wallet'>
+      <image src='/static/img/wallet.png'></image>
+      <view>我的钱包</view>
+    </navigator>
+  </van-col>
+  <van-col span="8">
+    <navigator class='user-btn'
+    url='/pages/user/myp/myp'>
+      <image src='/static/img/sure.png'></image>
+      <view>我的评价</view>
+    </navigator>
+  </van-col>
+</van-row>
+
+<van-cell-group>
+  <van-cell
+    title="跑腿认证"
+    is-link
+    url="/pages/user/authentication/authentication"
+  />
+  <van-cell
+    title="任务记录"
+    is-link
+    url="/pages/user/records/records"
+  />
+   <van-cell
+    title="明细"
+    is-link
+    url="/pages/user/details/details"
+  />
+   <van-cell
+    title="收货地址"
+    is-link
+    url="/pages/user/address/address"
+  />
+</van-cell-group>
+<van-switch-cell
+  title="消息提示"
+  checked="{{ msgTip }}"
+  bind:change="changeMsgTip"
+/>

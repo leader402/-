@@ -1,0 +1,16 @@
+<van-nav-bar
+  title="跑腿认证"
+/>
+
+<van-cell-group>
+  <van-field
+    value="{{ cardID }}"
+    label="身份证号"
+    placeholder="请输入身份证号"
+    error-message="{{phoneErr}}"
+  />
+</van-cell-group>
+
+<view style='width:1px;height:30px;'></view>
+
+<van-button type="primary" size="large" bind:click="submit"	>提交</van-button>

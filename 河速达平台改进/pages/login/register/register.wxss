@@ -1,0 +1,22 @@
+/* pages/register/register.wxss */
+.picker{
+  width:100%;
+  display:-webkit-flex;
+  display:flex;
+  padding:10px 15px;
+  box-sizing:border-box;
+  line-height:24px;
+  position:relative;
+  background-color:#fff;
+  color:#333;
+  font-size:14px;
+}
+.picker-sel{
+  max-width:90px;
+  min-width:90px;
+}
+.picker-con{
+  overflow:hidden;
+  text-align:right;
+  vertical-align:middle;
+}

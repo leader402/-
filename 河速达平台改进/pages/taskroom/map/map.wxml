@@ -1,0 +1,13 @@
+<view class="page-body">
+  <view class="map">
+    <map id="myMap" wx:if="{{map.hasMarkers}}" style="width: 100%; height: 100vh;" latitude="{{map.lat}}" longitude="{{map.lng}}" markers="{{map.markers}}" bindmarkertap="markersHandle" bindcallouttap="calloutHandle" scale='20' show-location>
+
+      <cover-view class='btn-item'>
+        <button bindtap="moveToLocation" size='mini' type="primary" style='padding: 5rpx 40rpx;'> 定位 </button>
+      </cover-view>
+    </map>
+
+  </view>
+
+
+</view>

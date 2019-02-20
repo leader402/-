@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "van-submit-bar": "/dist/submit-bar/index",
+    "van-field": "/dist/field/index",
+    "van-switch-cell": "/dist/switch-cell/index",
+    "van-cell": "/dist/cell/index",
+    "van-cell-group": "/dist/cell-group/index",
+    "van-toast": "/dist/toast/index"
+  }
+}

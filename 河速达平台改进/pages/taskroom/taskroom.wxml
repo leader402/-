@@ -1,0 +1,44 @@
+<!-- 底部bar -->
+<van-tabbar active="0" color="#f759ab" bind:change="changeBar">
+  <van-tabbar-item key="task" icon="shop" >任务大厅</van-tabbar-item>
+  <van-tabbar-item key="mytask" icon="records" info="3">我的任务</van-tabbar-item>
+  <van-tabbar-item key="user" icon="contact">用户中心</van-tabbar-item>
+</van-tabbar>
+
+<!-- 导航栏 -->
+<van-nav-bar title="任务大厅" class="task-header" />
+
+<!-- 轮播图 -->
+<swiper indicator-dots="true" autoplay="true" interval="3000" duration="300">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="100%" height="100%" />
+    </swiper-item>
+  </block>
+</swiper>
+
+<!-- 任务 -->
+<view class='body'>
+  <view wx:for="{{tasks}}" class='tasks'>
+    <view>
+      <van-panel title="{{item.name}}" 
+        desc="{{item.addr}}" status="{{item.money}}" 
+        use-footer-slot>
+        <view class='task-content'>{{item.detail}}</view>
+        <view slot="footer" class='task-btn'>
+          <van-button size="small" bind:click="detailTask" >详情</van-button>
+          <van-button size="small" bind:click="recvTask" data-task-index="{{index}}" type="primary">接受</van-button>
+        </view>
+      </van-panel>
+    </view>
+  </view>
+</view>
+
+<!-- 发布任务 -->
+<navigator class='release' url='/pages/taskroom/release/release'>
+  <view>发布</view>
+</navigator>
+
+
+<!-- 弹出框 -->
+<van-dialog id="van-dialog" />
